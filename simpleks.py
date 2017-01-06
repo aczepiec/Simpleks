@@ -239,7 +239,7 @@ def simpleks(A,f,b,c,mini):
     f.extend([0]*numOfVars)
     A_b = mergeAToB(A,b)
     resVars = list(range(numOfVars,numOfVars*2))
-    for i in range(numOfVars+1):
+    for i in range(MAX_ITER):
         b=[x[-1] for x in A_b]
         c_z = computeC_Z(f,computeZ(A_b,c))
         print("----------Tabela po iteracji: " + str(i) + "----------")
